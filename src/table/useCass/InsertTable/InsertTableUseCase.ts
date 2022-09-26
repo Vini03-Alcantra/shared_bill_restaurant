@@ -7,11 +7,7 @@ class InsertTableUseCase {
     ) {}
 
     async execute({number, vip}: ICreateTableDTO) {
-        let index = 0
-        const createTableDTO: ICreateTableDTO[] = [] 
-        createTableDTO[0].number = number;
-        createTableDTO[0].vip = vip;
-        index++;
+        return await this.tableRepository.create({number, vip})
     }
 }
 

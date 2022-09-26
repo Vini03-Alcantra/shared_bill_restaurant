@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "dev": "ts-node index.ts",
+    "dev": "ts-node-dev --inspect --transpile-only --ignore-watch node_modules --respawn ./src/shared/infra/http/server.ts",
     "test": "echo \"Tests running...\"",
     "build": "echo \"Build running...\"",
     "deploy": "echo \"Deploying new build to cloud server...\""
@@ -17,7 +17,11 @@
   },
   "devDependencies": {
     "@types/express": "^4.17.14",
+    "@types/jest": "^29.0.3",
     "@types/node": "^18.7.21",
+    "@types/supertest": "^2.0.12",
+    "jest": "^29.0.3",
+    "supertest": "^6.2.4",
     "ts-node": "^10.9.1",
     "ts-node-dev": "^2.0.0",
     "tsc": "^2.0.4",
