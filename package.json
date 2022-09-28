@@ -5,8 +5,8 @@
   "license": "MIT",
   "scripts": {
     "test": "jest",
-    "dev": "ts-node-dev --inspect --transpile-only --ignore-watch --respawn ./src/shared/infra/http/server.ts",    
-    "build": "tsc",
+    "dev": "ts-node-dev --inspect --transpile-only --ignore-watch node_modules --respawn src/shared/infra/http/server.ts",    
+    "build": "echo \"Build running...\"",
     "deploy": "echo \"Deploying new build to cloud server...\""
   },
   "dependencies": {
