@@ -5,7 +5,7 @@
   "license": "MIT",
   "scripts": {
     "test": "jest",
-    "dev": "ts-node-dev --inspect --transpile-only --ignore-watch node_modules --respawn src/shared/infra/http/server.ts",    
+    "dev": "ts-node-dev --inspect --transpile-only --ignore-watch node_modules --respawn src/shared/infra/http/server.ts",
     "build": "echo \"Build running...\"",
     "deploy": "echo \"Deploying new build to cloud server...\""
   },
@@ -16,6 +16,7 @@
     "prisma": "^4.3.1"
   },
   "devDependencies": {
+    "@faker-js/faker": "^7.5.0",
     "@types/express": "^4.17.14",
     "@types/jest": "^29.0.3",
     "@types/node": "^18.7.21",
