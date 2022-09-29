@@ -1,4 +1,4 @@
-import { PrismaClient } from "@prisma/client"
+import { PrismaClient, Table } from "@prisma/client"
 import {ICreateTableDTO} from "../../dto/ICreateTable"
 import { ITableRepository } from "../../repositories/ITableRepository"
 
@@ -16,6 +16,18 @@ class DatabaseTableRepository implements ITableRepository {
         } catch (err) {
             console.error(err)            
         }
+    }
+    
+    async listTables(): Promise<Table[]> {
+        try {
+            const tables = await prisma.table.findMany()
+
+            return tables
+        } catch (error) {
+            console.error(error)
+            throw new Error(error!)
+        }
+
     }
 
 }
